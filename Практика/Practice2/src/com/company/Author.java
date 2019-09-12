@@ -4,13 +4,13 @@ import java.lang.*;
 public class Author {
     String name;
     String email;
-    boolean male;
+    char sex;
 
-    public Author(String n, String e, boolean m)
+    public Author(String n, String e, char m)
     {
         name = n;
         email = e;
-        male = m;
+        sex = m;
     }
 
     public String getEmail() {
@@ -21,8 +21,8 @@ public class Author {
         return name;
     }
 
-    public boolean isMale() {
-        return male;
+    public char getSex() {
+        return sex;
     }
 
     public void setEmail(String email) {
@@ -31,12 +31,6 @@ public class Author {
 
     public String toString()
     {
-        String res;
-        res = name + " ";
-        if(male)
-            res += "(m) at " + email;
-        else
-            res += "(f) at " + email;
-        return res;
+        return name + "(" + sex + ") at " + email;
     }
 }
